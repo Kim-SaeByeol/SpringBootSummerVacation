@@ -1,8 +1,11 @@
 package kopo.poly.dto;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class NoticeDTO {
     private String notice_seq;
     private String title;
@@ -14,5 +17,4 @@ public class NoticeDTO {
     private String reg_dt;
     private String chg_id;
     private String chg_dt;
-
 }

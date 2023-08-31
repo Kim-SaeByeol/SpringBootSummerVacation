@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>아이디 찾기</title>
-    <link rel="stylesheet" href="/css/table.css"/>
+    <link rel="stylesheet" href="/css/login.css">
     <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
 
@@ -17,7 +17,7 @@
 
             // 아이디 찾기
             $("#btnSearchUserId").on("click", function () {
-                let f = document.getElementById("f"); // form 태그
+                let f = document.getElementById("searchUserId-form"); // form 태그
 
                 if (f.user_name.value === "") {
                     alert("이름을 입력하세요.");
@@ -36,8 +36,6 @@
 
                 f.submit(); // 아이디 찾기 정보 전송하기
             })
-
-
         })
     </script>
 </head>
@@ -45,8 +43,8 @@
 <h2>아이디 찾기</h2>
 <hr/>
 <br/>
-<form id="f">
-    <div class="divTable minimalistBlack">
+<form method="post" id="searchUserId-form">
+    <div class="login-wrapper">
         <div class="divTableBody">
             <div class="divTableRow">
                 <div class="divTableCell">이름
@@ -63,11 +61,10 @@
                 </div>
             </div>
         </div>
+        <input type="submit" value="아이디 찾기" id="btnSearchUserId">
+        <input type="button" value="로그인" id="btnLogin">
     </div>
-    <div>
-        <button id="btnSearchUserId" type="button">아이디 찾기</button>
-        <button id="btnLogin" type="button">로그인</button>
-    </div>
+
 </form>
 </body>
 </html>
